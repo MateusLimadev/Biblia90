@@ -1,0 +1,20 @@
+
+
+h1{
+    text-align: center;
+    color: aliceblue;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 167px;
+    
+}
+
+p{
+    text-align: center;
+    color: aliceblue;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    background-image: url(background.png);
+    background-color: black;
+}
