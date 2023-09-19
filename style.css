@@ -1,0 +1,210 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
+
+body{
+    background-image: url(Imagens/background.png);
+    background-color: black;
+}
+  
+
+.logo-topo{
+    padding-left: 30px;
+}
+
+.menu-mobile{
+    display: none;
+}
+
+.menu-topo{
+     flex-direction: row;
+     display: flex;
+     justify-content: space-evenly;
+     color: aliceblue;
+     font-size: 20px;
+     font-family: 'Times New Roman', Times, serif;
+     
+     
+}
+
+.menu-topo p:hover{
+   color: #BBAB1E;
+   transform: translateY(2px);
+   
+}
+
+
+#frase1{
+    color: aliceblue;
+    text-align: center;
+    margin-top: 100px;
+    font-size: 20px;
+    font-family: 'Anonymous Pro', monospace;
+    
+}
+
+#frase-mobile{
+    display: none;
+}
+
+.botao{
+    flex-direction: row;
+    text-align: center;
+    padding-top: 50px;
+}
+
+
+
+button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #BBAB1E;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 17px;
+    padding: 16px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+   }
+   
+   button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+   }
+   
+   button span:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -15px;
+    transition: 0.5s;
+   }
+   
+   button:hover span {
+    padding-right: 15px;
+   }
+   
+   button:hover span:after {
+    opacity: 1;
+    right: 0;
+   }
+
+
+  .menu-lateral{
+    display: none;
+  }
+
+   .emdev{
+     color: #FFFFFF;
+     text-align: center;
+     margin-top: 135px;
+     font-family: 'Anonymous Pro', monospace;
+   }
+
+   .emdevmob{
+    display: none;
+   }
+  
+   @media screen and (max-width: 480px) {
+    /* Seu CSS para celulares vai aqui */
+
+    /* Exemplo: */
+    .menu-topo{
+        display: none;
+    }
+
+    .logo-topo{
+        padding-left: 30%;
+        padding-top: 20px;
+    }
+
+    .botao{
+        padding-top: 30px;
+        
+    }
+
+    button {
+        width: 150px;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    #frase1{
+        display: none;
+    }
+
+    #frase-mobile{
+        display: block;
+        color: #FFFFFF;
+        text-align: center;
+        padding-top: 80px;
+        font-family: 'Anonymous Pro', monospace;
+        
+    }
+
+    .menu-mobile{
+        display: block;
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        padding-top: 31px;
+        padding-left: 7px;
+        
+    }
+
+    
+    .menu-lateral {
+        width: 0;
+        height: 100vh; /* Faz o menu ocupar 100% da altura da tela */
+        position: fixed;
+        z-index: 1;
+        top: 0; /* Adicionado para garantir que o menu comece no topo da tela */
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        display: block;
+    }
+    
+
+    .menu-lateral p {
+        padding-left: 55px;
+        padding-top: 20px;
+        font-size: 22px;
+        color: white;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    
+
+    .menu-lateral p:hover {
+        padding-left: 55px;
+        padding-top: 20px;
+        font-size: 22px;
+        color: #BBAB1E;
+    }
+
+    .menu-lateral img {
+        padding-left: 20px;
+        padding-top: 20px;
+    }
+    #voltar{
+        width: 18px;
+    }
+
+    .emdev{
+        display: none;
+    }
+       
+   .emdevmob{
+    display: block;
+    color: #FFFFFF;
+     text-align: center;
+     padding-top: 218px;
+     font-family: 'Anonymous Pro', monospace;
+   }
+}
