@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Bíblia Online</title>
+    <meta name="description" content="A Bíblia Online permite efetuar pesquisas nos textos bíblicos de uma forma fácil e prática." />
+    <meta name="keywords" content="pesquisa, palavra, expressão, texto, livro, testamento, versículo, capítulo, cabeçalho, tradução, bíblia, Deus" />
+    <!-- Colocar o seguinte código dentro da tag HEAD da página **** Place the following code inside the HEAD tag of the page -->
+    <script type="text/javascript" src="https://www.iguga.org/js/igpostmessage.js"></script>
+    <script type="text/javascript">
+    /*<![CDATA[*/
+        window.onload = function()
+        {
+            var iGugaBibleContainer = document.getElementById("iGugaBibleContainer");
+             
+            if (typeof iGugaBibleContainer !== "undefined" && iGugaBibleContainer !== null) {
+                 
+                /* Link da Bíblia Online iGuga Personalizada utilizando HTTPS */
+                var iGugaBibleCustomLink = 'https://www.iguga.org/bible/searchFrame/ID/0d52a738683f198708d5fcc48e0eb723';
+          
+                var iGugaBibleFrameSource = iGugaBibleCustomLink + '?fromUrl=' + encodeURIComponent(document.location.href);
+                 
+                iGugaBibleContainer.innerHTML = '<iframe id="iGugaBibleFrame" src="' + iGugaBibleFrameSource + '" style="height: 1000px; width: 100%;" scrolling="no" frameborder="0" allowtransparency="true"></iframe>';
+            }
+        }
+        igPostMessage.receiveMessage(function(event)
+        {
+            if ((!isNaN(event.data)) && (event.data > 0))
+            {
+                var iGugaBibleFrame = document.getElementById("iGugaBibleFrame");
+                 
+                if (typeof iGugaBibleFrame !== "undefined" && iGugaBibleFrame !== null) {
+                    iGugaBibleFrame.style.height = '100%';
+                    iGugaBibleContainer.style.height = event.data + 'px';
+                }
+            }
+        }, 'https://www.iguga.org');
+    /*]]>*/
+    </script>
+    <!-- Fim do código **** End of code -->
+</head>
+<body>
+    <!-- Colocar o seguinte código dentro da tag BODY da página **** Place the following code inside the BODY tag of the page -->
+    <div id="iGugaBibleContainer"><a href="http://www.iguga.org">http://www.iguga.org</a></div>
+    <!-- Fim do código **** End of code -->
+</body>
